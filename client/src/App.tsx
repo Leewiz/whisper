@@ -1,9 +1,9 @@
+import ChatWindow from './components/ChatWindow'
+import './App.css'
 function App() {
   return (
-    <div>
-      hello world
-    </div>
+    <ChatWindow />
   )
 }
 
-export default App
+export default App;
