@@ -1,12 +1,11 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
 import dbConnect from './lib/dbConnect';
 import { PORT } from './utils/config';
-// import icecreamRouter from './controllers/icecreams';
-
+import emoteRouter from './controllers/emoteRouter';
 const app: Express = express();
 const port = PORT;
 
-// app.use('/api/icecreams', icecreamRouter);
+app.use('/api/emotes', emoteRouter);
 
 const start = async () => {
   try {
