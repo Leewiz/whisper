@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSocket } from "../contexts/SocketContext";
 import "./input-container.css";
 function InputContainer() {
@@ -7,6 +8,15 @@ function InputContainer() {
     socket?.emit("message", "handleClick: clicked the send button");
     return 0;
   };
+
+  useEffect(() => {
+    if (!socket) return;
+
+    socket.on("message", (message: string) => {
+      console.log(message);
+    });
+  }, [socket]);
+
   return (
     <div className="input-container">
       <input
