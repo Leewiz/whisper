@@ -1,8 +1,8 @@
-.input-container {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #fff;
+.input-form {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .input-box {

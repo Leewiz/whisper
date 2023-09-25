@@ -1,12 +1,12 @@
 import MessageContainer from "./MessageContainer";
-import InputContainer from "./InputContainer";
+import MessageInputForm from "./MessageInputForm";
 import "./chat-window.css";
 
 function ChatWindow() {
   return (
     <div className="chat-window">
       <MessageContainer />
-      <InputContainer />
+      <MessageInputForm />
     </div>
   );
 }

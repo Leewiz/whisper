@@ -1,9 +1,6 @@
-import './message-container.css'
+import "./message-container.css";
 function MessageContainer() {
-  return (
-    <div className="message-container"></div>
-  )
+  return <div className="message-container"></div>;
 }
 
-export default MessageContainer
-
+export default MessageContainer;
