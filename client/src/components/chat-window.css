@@ -1,7 +1,6 @@
 .chat-window {
-    width: 80%;
-    max-width: 800px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
 }
