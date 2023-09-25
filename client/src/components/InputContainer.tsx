@@ -9,12 +9,19 @@ function InputContainer() {
     return 0;
   };
 
+  const handleChange = (e: React.ChangeEvent) => {
+    console.log((e.target as HTMLInputElement).value);
+  };
+
   useEffect(() => {
     if (!socket) return;
 
     socket.on("message", (message: string) => {
       console.log(message);
     });
+    return () => {
+      socket.off("message");
+    };
   }, [socket]);
 
   return (
@@ -23,6 +30,7 @@ function InputContainer() {
         type="text"
         className="input-box"
         placeholder="Type your message..."
+        onChange={handleChange}
       />
       <button className="send-button" onClick={handleClick}>
         Send
