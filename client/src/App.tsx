@@ -1,9 +1,12 @@
-import ChatWindow from './components/ChatWindow'
-import './App.css'
+import ChatWindow from "./components/ChatWindow";
+import { SocketProvider } from "./contexts/SocketContext";
+import "./App.css";
 function App() {
   return (
-    <ChatWindow />
-  )
+    <SocketProvider>
+      <ChatWindow />
+    </SocketProvider>
+  );
 }
 
 export default App;
