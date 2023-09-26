@@ -1,14 +1,14 @@
-import MessageContainer from './MessageContainer'
-import InputContainer from './InputContainer'
-import './chat-window.css'
+import MessageContainer from "./MessageContainer";
+import MessageInputForm from "./MessageInputForm";
+import "./chat-window.css";
+
 function ChatWindow() {
   return (
     <div className="chat-window">
-        <MessageContainer />
-        <InputContainer />
+      <MessageContainer />
+      <MessageInputForm />
     </div>
-  )
+  );
 }
 
 export default ChatWindow;
-
