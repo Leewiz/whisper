@@ -4,7 +4,6 @@ import { setupSocketServer } from "./lib/socketServer";
 import { CHAT_PORT, MONGO_PORT } from "./utils/config";
 import emoteRouter from "./controllers/emoteRouter";
 import http from "http";
-import { Server } from "socket.io";
 const cors = require("cors");
 
 const app: Express = express();

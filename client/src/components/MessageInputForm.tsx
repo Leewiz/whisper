@@ -6,9 +6,9 @@ function MessageInputForm() {
   const { socket } = useSocket();
 
   // send the message to the server when the form is submitted
-  const onFormSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(message);
+    console.log(`input form: ${message}`);
     socket?.emit("message", message);
     setMessage("");
   };
@@ -31,7 +31,7 @@ function MessageInputForm() {
   }, [socket]);
 
   return (
-    <form className="input-form" onSubmit={onFormSubmit}>
+    <form className="input-form" onSubmit={handleSubmit}>
       <input
         type="text"
         className="input-box"
